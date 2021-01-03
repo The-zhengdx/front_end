@@ -7,7 +7,7 @@
       - [1.3. 内联块级元素](#13-内联块级元素)
   - [未弄懂的问题](#未弄懂的问题)
 ## 今日任务
-[flag页面](task.html)
+[flag页面](https://the-zhengdx.github.io/front_end/day01/task.html)
 ## 知识点总结
 ### 1. HTML元素分类
 #### 1.1. 块级元素(block) 
