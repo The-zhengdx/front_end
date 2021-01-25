@@ -2,6 +2,27 @@
 ## css级联规则(样式优先级)
 更加具体的选择器的优先级更高，同优先级的选择器，后声明的选择器覆盖先声明的选择器
 
+## 选择器优先级计算规则
+千位：如果声明在 style 的属性（内联样式）则该位得一分。这样的声明没有选择器，所以它得分总是1000。
+百位：选择器中包含ID选择器则该位得一分。
+十位：选择器中包含类选择器、属性选择器或者伪类则该位得一分。
+个位：选择器中包含元素、伪元素选择器则该位得一分。
+
+## 当使用选择器列表时，只要有一个选择器无效，那么整条规则都会失效
+```css
+h1 {
+    color: red;
+}
+/* id选择器错误，规则失效，不影响其他规则 */
+..special {
+    color: red
+}
+/* id选择器错误，整条规则都失效，h1受影响 */
+h1, ..special {
+    color: red;
+}
+```
+
 ## 浏览器加载网页的步骤
 1.浏览器载入HTML文件（比如从网络上获取）。
 2.将HTML文件转化成一个DOM（Document Object Model），DOM是文件在计算机内存中的表现形式。
@@ -34,7 +55,7 @@ font-weight: bold;
 text-transform: capitalize;
 /*
 字体装饰
-text-decoration属性是一下三个属性的缩写
+text-decoration属性是以下三个属性的缩写
 text-decoration-line
 text-decoration-style
 text-decoration-color
