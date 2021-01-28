@@ -77,4 +77,7 @@ Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 
 Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
 Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。
 
+## rgba与opacity的区别
+opacity让元素和它里面的所有东西都不透明，而rgba只让指定的颜色不透明
+
 ## 布局
