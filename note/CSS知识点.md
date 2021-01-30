@@ -89,3 +89,8 @@ opacity让元素和它里面的所有东西都不透明，而rgba只让指定的
 5. 粘性定位(sticky)，是一种新的定位方式，它会让元素先保持和position: static一样的定位，当它的相对视口位置(offset from the viewport)达到某一个预设值时，他就会像position: fixed一样定位。
 
 ### 2. 弹性盒子(flex)
+1. 弹性容器：给元素设置display: flex，元素变为一个弹性容器，其直接子项变成弹性容器子项，弹性容器属性如下：
+- flex-direction: 设置子项排列方向
+-- row: 横向
+-- column: 纵向
+- 
