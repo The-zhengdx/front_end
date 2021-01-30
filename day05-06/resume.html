@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESUME</title>
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style_3.css">
 </head>
 <body>
+    <aside id="aside">
+        <div onclick="changeStyle(1)">主题一</div>
+        <div onclick="changeStyle(2)">主题二</div>
+        <div onclick="changeStyle(3)">主题三</div>
+    </aside>
     <div class="resume">
         <div class="header">简历</div>
         <div class="main-body">
@@ -85,5 +91,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function changeStyle(n) {
+            var styleLink = document.getElementsByTagName("link");
+            styleLink[1].setAttribute("href", "css/style_" + n + ".css");
+        }
+    </script>
 </body>
 </html>
