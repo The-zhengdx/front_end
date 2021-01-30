@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+.resume {
+    display: flex;
+    align-items: stretch;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 200px;
+    padding-top: 50px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 1.5rem;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.base-info .info div,
+.contact .info div {
+    display: inline-block;
+}
+
+.base-info .info-item:not(:last-child),
+.contact .info-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.base-info .info-value,
+.contact .info-value {
+    margin-left: 10px;
+}
+
+.skill .info-item:not(:last-child),
+.education .info-item:not(:last-child),
+.project .info-item:not(:last-child) {
+    margin-bottom: 15px;
+}
