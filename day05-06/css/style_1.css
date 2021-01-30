@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+.resume {
+    width: 800px;
+    padding: 0 10px;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+}
+
+.header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 1.5rem;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.base-info .info div,
+.contact .info div {
+    display: inline-block;
+}
+
+.base-info .info-item:not(:last-child),
+.contact .info-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.base-info .info-value,
+.contact .info-value {
+    margin-left: 10px;
+}
+
+.skill .info-item:not(:last-child),
+.education .info-item:not(:last-child),
+.project .info-item:not(:last-child) {
+    margin-bottom: 15px;
+}
