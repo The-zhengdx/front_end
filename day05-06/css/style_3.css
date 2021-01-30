@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+.resume {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+}
+
+.header {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: gray;
+}
+
+.section {
+    display: flex;
+    height: 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 120px;
+    background-color: lightgray;
+}
+
+.section:not(:last-child) .title {
+    border-bottom: 1px solid white;
+}
+
+.info {
+    flex: 1;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.section:not(:last-child) .info {
+    border-bottom: 1px solid lightgray;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.base-info .info div,
+.contact .info div {
+    display: inline-block;
+}
+
+.base-info .info-item:not(:last-child),
+.contact .info-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.base-info .info-value,
+.contact .info-value {
+    margin-left: 10px;
+}
+
+.skill .info-item,
+.education .info-item,
+.project .info-item {
+    display: flex;
+}
