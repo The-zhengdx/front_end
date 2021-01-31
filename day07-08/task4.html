@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局，左右侧固定200px，中间自适应</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/task4_float.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li onclick="changeStyle('float')">浮动实现</li>
+            <li onclick="changeStyle('position')">定位实现</li>
+            <li onclick="changeStyle('flex')">flex实现</li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="left"></div>
+        <div class="mid"></div>
+        <div class="right"></div>
+    </div>
+    <script>
+        function changeStyle(name) {
+            var styleLink = document.getElementsByTagName("link");
+            styleLink[1].setAttribute("href", "css/task4_" + name + ".css");
+        }
+    </script>
+</body>
+</html>
