@@ -1,0 +1,14 @@
+.left {
+    float: left;
+    width: 200px;
+}
+
+.right {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.mid {
+    float: right;
+    width: 200px;
+}
