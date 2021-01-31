@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.right {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+}
