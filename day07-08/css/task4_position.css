@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.mid {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+}
