@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    width: 300px;
+    margin: 20px auto;
+    background-color: lightgray;
+    font-size: 0;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    width: 100px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+li:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+li:hover {
+    background-color: gray;
+}
+
+div {
+    height: 500px;
+}
+
+.left {
+    background-color: yellow;
+}
+
+.right {
+    background-color: lightblue;
+}
