@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.left {
+    flex-basis: 200px;
+}
+
+.mid {
+    flex-basis: 200px;
+}
+
+.right {
+    flex: 1;
+}
