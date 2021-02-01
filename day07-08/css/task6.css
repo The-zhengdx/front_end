@@ -1,0 +1,177 @@
+/* 初始化样式 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* header部分 */
+header {
+    background-color: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+#logo {
+    height: 80px;
+    line-height: 80px;
+    font-size: 3rem;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.header-nav li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.header-nav a {
+    color: white;
+}
+
+/* banner部分 */
+.banner {
+    background-color: #6b3;
+}
+
+.banner-container {
+    position: relative;
+    width: 960px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    list-style: none;
+    font-size: 2rem;
+}
+
+.banner-button li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 35px;
+    border: 1px solid #335e1a;
+    background-color: #b2dd99;
+}
+
+.banner-button li:not(:last-child) {
+    margin-right: 5px;
+}
+
+/* 假如只用.banner-button-active来选择，优先级比.banner-button li低，height、background-color属性不会覆盖 */
+.banner-button .banner-button-active {
+    height: 50px;
+    padding-top: 15px;
+    background-color: #e0f1d6;
+}
+
+/* nav部分 */
+nav {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 960px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    font-size: 1.8rem;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #eee;
+}
+
+.nav-button-active {
+    /* 利用相对定位，将元素下移一像素，覆盖nav的灰色线 */
+    /* position: relative;
+    top: 1px;
+    left: 0;
+    height: 51px;
+    padding-bottom: 1px; */
+    /* 利用margin负值，将元素下移一像素，覆盖nav的灰色线 */
+    height: 51px;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+    background-color: #fff;
+}
+
+/* content部分 */
+.content {
+    min-height: calc(100vh - 570px);
+}
+
+.content-container {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    width: 970px;
+    margin: 5px auto 15px auto;
+}
+
+.content-item {
+    flex: 1;
+    padding: 80px;
+    margin: 5px;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* footer部分 */
+footer {
+    background-color: #666;
+}
+
+.footer-container {
+    width: 960px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+}
