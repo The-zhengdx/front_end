@@ -31,7 +31,6 @@ header {
 
 .header-nav {
     display: flex;
-    justify-content: space-between;
     list-style: none;
     margin-top: 10px;
     font-size: 1.5rem;
@@ -60,7 +59,6 @@ header {
 
 .banner-button {
     display: inline-flex;
-    justify-content: space-between;
     align-items: flex-end;
     position: absolute;
     right: 0;
@@ -97,7 +95,6 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-end;
     width: 960px;
     height: 70px;
@@ -136,12 +133,13 @@ nav {
 
 /* content部分 */
 .content {
+    /* 设置content最小高度为视窗高度减去header、banner、nav、footer高度之和的差，目的是为了在浏览器视窗高度太高的时候，将footer部分挤到浏览器视窗的最下面，如果不设置最小高度，则当浏览器视窗过高时，footer下面会有空白 */
     min-height: calc(100vh - 570px);
 }
 
 .content-container {
     display: flex;
-    justify-content: stretch;
+    /* justify-content: stretch; */
     flex-wrap: wrap;
     width: 970px;
     margin: 5px auto 15px auto;
