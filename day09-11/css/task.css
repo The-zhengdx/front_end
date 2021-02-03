@@ -1,0 +1,10 @@
+/* 初始化样式 */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px; /* 使用rem计算字体大小更方便 */
+}
