@@ -8,3 +8,97 @@
 html {
     font-size: 10px; /* 使用rem计算字体大小更方便 */
 }
+
+body > * {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header部分 */
+header {
+    background-image: url(../images/header_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* header遮罩层，过滤背景图片 */
+.header-cover {
+    display: flow-root; /* 触发BFC，阻止内部margin穿透 */
+    height: 990px;
+    background-color: rgba(200, 200, 200, .1);
+}
+
+.header-cover div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.header-title {
+    margin-top: 200px;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.header-text {
+    margin-top: 80px;
+    width: 770px;
+    font-size: 2rem;
+    color: #7b7871;
+}
+
+.signUp-form {
+    width: 970px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 60px 100px 50px 100px;
+    border: 1px solid #565550;
+}
+
+.signUp-title {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.signUp-text {
+    margin-bottom: 45px;
+    font-size: 1.2rem;
+    color: #726f66;
+}
+
+.signUp-input {
+    font-size: 0;
+}
+
+.signUp-input input {
+    outline: none; /* input聚焦时，会有一圈轮廓线，轮廓线不占布局空间 */
+    padding: 20px;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
+
+.signUp-input input:not(:last-child) {
+    margin-right: 30px;
+}
+
+.signUp-input input[type="text"],
+.signUp-input input[type="password"] {
+    width: 290px;
+    height: 50px;
+    border: 1px solid #565550;
+    color: #fff;
+    background-color: transparent;
+}
+
+.signUp-input input[type="submit"] {
+    width: 125px;
+    height: 50px;
+    border: none; /* border为none时，border-radius依然有效 */
+    background-color: #fff;
+}
