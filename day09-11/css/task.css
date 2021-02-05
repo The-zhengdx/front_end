@@ -102,3 +102,56 @@ header {
     border: none; /* border为none时，border-radius依然有效 */
     background-color: #fff;
 }
+
+/* features部分 */
+.features > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-small-title,
+.features-big-title {
+    text-align: center;
+}
+
+.features-small-title {
+    margin-top: 85px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.features-big-title {
+    margin-top: 40px;
+    width: 660px;
+    font-size: 4rem;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1030px;
+    margin-top: 80px;
+}
+
+.feature-item {
+    display: flex;
+    width: 430px;
+    height: 165px;
+}
+
+.feature-item-img {
+    flex-shrink: 0;
+    margin-right: 25px;
+    width: 50px;
+}
+
+.feature-item-title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.feature-item-text {
+    font-size: 1.6rem;
+}
