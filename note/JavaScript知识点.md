@@ -85,3 +85,39 @@ typeof null // "object" 历史原因，兼容旧语法
 ```
 2. instanceof运算符
 3. Object.prototype.toString方法
+
+### 函数
+JavaScript中函数是一等公民，一等公民的意思是：函数可赋值给变量，可作为函数参数，可作为函数返回值
+
+JavaScript中函数三种定义方式
+- 函数声明
+```javascript
+function f(argument) {
+    // 函数体
+}
+// 与变量声明类似，函数声明也会被提升到头部
+// 不需要分号
+```
+- 函数表达式
+```javascript
+var f = function(argument) {
+    // 函数体
+};
+// 等号后面是一个匿名函数
+// 这种方式只会把"var f"提升到头部
+// 需要分号
+var f1 = function f2(argument) {
+    //function body
+}
+// f1是真正的函数名，f2函数名只能在函数体内部用
+```
+- 函数对象构造函数
+```javascript
+var f = new Function(
+    "",
+    "",
+    ""
+);
+// 最后一个参数为函数体，前面的均为函数参数
+// 需要分号，此法不直观，很少使用
+```
