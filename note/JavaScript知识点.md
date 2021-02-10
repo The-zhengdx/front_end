@@ -121,3 +121,15 @@ var f = new Function(
 // 最后一个参数为函数体，前面的均为函数参数
 // 需要分号，此法不直观，很少使用
 ```
+
+### 数组
+数组的本质是一种特殊的对象，数组的下标是默认的key，是字符串，对应下标的值就是对应key的value
+```javascript
+arr = [1, 2, 3]
+arr[0] // 1
+arr["0"] // 1
+arr[-1] = -1 // 不会报错，只是给arr这个对象增加了一个key为"-1"，value为-1的属性
+```
+
+### NodeList接口，HTMLCollection接口
+NodeList可以包含各种类型节点，HTMLCollection只能包含HTML元素节点
