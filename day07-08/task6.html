@@ -61,5 +61,16 @@
             <p class="copyright">&copy; 2018 ife.baidu.com</p>
         </div>
     </footer>
+    <script>
+        let bannerBtn = document.querySelector(".banner-button");
+        bannerBtn.addEventListener("click", function(e){
+            let target = e.target;
+            let lastActive = document.querySelector(".banner-button-active");
+            if (target !== lastActive) {
+                lastActive.setAttribute("class", "");
+                e.target.setAttribute("class", "banner-button-active");
+            }
+        });
+    </script>
 </body>
 </html>
