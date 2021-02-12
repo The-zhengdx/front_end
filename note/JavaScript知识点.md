@@ -133,3 +133,12 @@ arr[-1] = -1 // 不会报错，只是给arr这个对象增加了一个key为"-1"
 
 ### NodeList接口，HTMLCollection接口
 NodeList可以包含各种类型节点，HTMLCollection只能包含HTML元素节点
+
+### 对于input元素，getAttribute("value")与input.value的不同
+```javascript
+// html如下
+// <input id="input" value="0" type="text">
+let input = document.getElementById("input");
+let v1 = input.getAttribute("value"); // 始终为0，不会获取到输入的值
+let v2 = input.value; // 获取到的是输入的值
+```
