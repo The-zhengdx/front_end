@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3的小游戏</title>
+</head>
+<body>
+    <h1>3的小游戏</h1> 
+</body>
+<script>
+    let res = [];
+    for (let i = 1; i < 101; i++) {
+        if (i % 3 === 0 || String(i).indexOf("3") !== -1) {
+            res.push("PA");
+        } else {
+            res.push(i);
+        }
+    }
+    console.log(res);
+</script>
+</html>
