@@ -13,23 +13,47 @@
         const btn = document.getElementById("fade-btn");
         const obj = document.getElementById("fade-obj");
         let opcity = 1, sign = -1;
-        btn.addEventListener("click", function() {
+        // setInterval
+        // btn.addEventListener("click", function() {
+        //     btn.setAttribute('disabled', 'disabled');
+        //     let intervalId = setInterval(function() {
+        //         opcity += 0.1 * sign;
+        //         obj.style.opacity = opcity;
+        //         if (Math.abs(opcity - 0) < 0.01 || Math.abs(opcity - 1) < 0.01) {
+        //             btn.removeAttribute('disabled');
+        //             sign *= -1;
+        //             if (Math.abs(opcity - 0) < 0.01) {
+        //                 btn.textContent = '淡入';
+        //             } else {
+        //                 btn.textContent = '淡出';
+        //             }
+        //             clearInterval(intervalId);
+        //         }
+        //     }, 100);
+        // });
+
+        // setTimeout
+        btn.addEventListener('click', function() {
             btn.setAttribute('disabled', 'disabled');
-            let intervalId = setInterval(function() {
+            fade();
+        });
+        function fade() {
+            setTimeout(function() {
                 opcity += 0.1 * sign;
                 obj.style.opacity = opcity;
-                if (Math.abs(opcity - 0) < 0.01 || Math.abs(opcity - 1) < 0.01) {
-                    btn.removeAttribute('disabled');
+                if (Math.abs(opcity - 1) < 0.01 || Math.abs(opcity - 0) < 0.01) {
                     sign *= -1;
+                    btn.removeAttribute('disabled');
                     if (Math.abs(opcity - 0) < 0.01) {
                         btn.textContent = '淡入';
                     } else {
                         btn.textContent = '淡出';
                     }
-                    clearInterval(intervalId);
+                } else {
+                    setTimeout(fade, 100);
                 }
             }, 100);
-        });
+        }
     </script>
 </body>
 </html>
