@@ -30,19 +30,28 @@
 
         // btn0
         btns[0].addEventListener('click', function() {
-            let checkedValue = document.querySelector('input[type="radio"][name="math-obj"][checked="checked"').value;
+            let checkedValue = getCheckedValue();
             let inputValue = inputA.value;
             if (checkedValue === 'b') {
                 inputValue = inputB.value;
             }
+            console.log(inputValue);
+            console.log(typeof inputValue);
             if (Number(inputValue) === NaN) {
-                p.textContent = '不';
+                p.textContent = '不是数字';
+            } else {
+                p.textContent = '是数字';
             }
-            p.textContent += '是数字';
         });
 
         function getCheckedValue() {
-            return document.querySelector('input[type="radio"][name="math-obj"][checked="true"').value;
+            let objs = document.querySelectorAll('input[name="math-obj"]');
+            for (let i = 0, l = objs.length; i < l; i++) {
+                if (objs[i].checked) {
+                    return objs[i].value;
+                }
+            }
+            return undefined;
         }
 
         // btn1
