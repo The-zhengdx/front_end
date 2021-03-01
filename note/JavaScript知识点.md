@@ -26,6 +26,8 @@ switch (a) {
 // 输出"没有发生类型转换"
 ```
 
+### switch中块级作用域为整个switch结构，而不是每个case一个块级作用域
+
 ### 3. 数据类型
 1. number
 2. string
