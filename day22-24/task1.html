@@ -53,7 +53,7 @@
                 case '1':
                     let checkedValue1 = getCheckedValue();
                     if (checkedValue1 === undefined) {
-                        result.textContent = '还未选择输入框';
+                        console.log('还未选择输入框');
                     } else {
                         if (isNum(checkedValue1)) {
                             result.textContent = checkedValue1 + '是数字';
