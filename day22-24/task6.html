@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple&lt;-pear</p>    
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+    <script>
+
+        var queue = ["apple", "pear"];
+        const queueInput = document.getElementById('queue-input');
+        const queueCont = document.getElementById('queue-cont');
+
+        // 输出队列内容
+        function printQueue() {
+            queueCont.textContent = '队列内容：' + queue.join('<-');
+        }
+        
+        document.body.addEventListener('click', function(e) {
+            switch (e.target.id) {
+                case 'in-btn':
+                    // 入队
+                    if (queueInput.value) {
+                        // 如果输入不为空则入队
+                        queue.push(queueInput.value);
+                    }
+                    printQueue();
+                    break;
+                case 'out-btn':
+                    // 出队
+                    queue.shift();
+                    printQueue();
+                    break;
+                case 'font-btn':
+                    // 获取对头元素
+                    if (queue.length) {
+                        queueCont.textContent = '对头元素为：' + queue[0];
+                    } else {
+                        queueCont.textContent = '队列为空';
+                    }
+                    break;
+                case 'empty-btn':
+                    // 判空
+                    queueCont.textContent = '队列是否为空：' + (queue.length > 0 ? '否' : '是');
+            }
+        });
+    </script>
+</body>
+</html>
