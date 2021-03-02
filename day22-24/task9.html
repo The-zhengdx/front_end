@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>打开控制台</h1>
+    <script>
+        var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+        arr.sort((a, b) => b - a);
+        console.log(arr.toString());
+        arr.sort((a, b) => a - b);
+        console.log(arr.toString());
+
+        arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+        arr.sort();
+        console.log(arr.toString());
+        console.log(arr.reverse().toString());
+
+        arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+        arr.sort((a, b) => b[1] - a[1]);
+        let printStr = [];
+        for (let i = 0, l = arr.length; i < l; i++) {
+            printStr.push('[' + arr[i].join(', ') + ']');
+        }
+        console.log('[' + printStr.join(', ') + ']');
+
+        arr = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ];
+        arr.sort((o1, o2) => o1.value - o2.value);
+        console.log(arr);
+    </script>
+</body>
+</html>
