@@ -43,11 +43,9 @@
 
         // 获取当前选中的输入框的内容
         function getCheckedValue() {
-            const strObjs = document.querySelectorAll('input[name="str-obj"');
-            for (let i = 0, l = strObjs.length; i < l; i++) {
-                if (strObjs[i].checked) {
-                    return document.getElementById('str-' + strObjs[i].value).value;
-                }
+            const checked = document.querySelector('input[name="str-obj"]:checked');
+            if (checked) {
+                return document.getElementById('str-' + checked.value).value;
             }
             return undefined;
         }
