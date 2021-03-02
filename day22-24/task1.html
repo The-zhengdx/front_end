@@ -29,11 +29,9 @@
 
         // 获取当前选中的输入框的值
         function getCheckedValue() {
-            const mathObjs = document.querySelectorAll('input[name="math-obj"');
-            for (let i = 0, l = mathObjs.length; i < l; i++) {
-                if (mathObjs[i].checked) {
-                    return document.querySelector('#num-' + mathObjs[i].value).value;
-                }
+            const checked = document.querySelector('input[name="math-obj"]:checked');
+            if (checked) {
+                return document.getElementById('num-' + checked.value).value;
             }
             return undefined;
         }
