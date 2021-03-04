@@ -52,9 +52,13 @@
                 if (id == keys[i]) {
                     return obj[keys[i]];
                 } else if (obj[keys[i]]['subMenu']) {
-                    return getParent(id, obj[keys[i]]['subMenu']);
+                    return bfs();
                 }
             }
+            return null;
+        }
+        function bfs(id, obj, flag) {
+            
         }
         menuArr.forEach(function(item, index, arr) {
             let itemObj = {
