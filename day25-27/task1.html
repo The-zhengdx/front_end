@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #time {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1 id="time"></h1>
     <script>
-
+        let now = Date.now();
+        const time = document.getElementById('time');
+        time.textContent = new Date(now).toLocaleString();
+        setInterval(function() {
+            now += 1000;
+            time.textContent = new Date(now).toLocaleString();
+        }, 1000);
     </script>
 </body>
 </html>
