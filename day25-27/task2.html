@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <script>
+        const time = document.getElementById('time');
+        let now = Date.now();
+        let formatString = 'YYYY-MM-DD 星期几 hh:mm:ss APM';
+
+        function dateFormatter(date, formatString) {
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let day = date.getDate();
+            let weekday = date.getDay();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+
+            formatString = formatString.replace('YYYY', String(year));
+            formatString = formatString.replace('YY', String(year % 100));
+            formatString = formatString.replace('MM', twoDigit(month));
+            formatString = formatString.replace('M', String(month));
+            formatString = formatString.replace('DD', twoDigit(day));
+            formatString = formatString.replace('D', String(day));
+            formatString = formatString.replace('hh', twoDigit(hour));
+            formatString = formatString.replace('h', String(hour));
+            formatString = formatString.replace('mm', twoDigit(minute));
+            formatString = formatString.replace('m', String(minute));
+            formatString = formatString.replace('ss', twoDigit(second));
+            formatString = formatString.replace('s', String(second));
+            if (formatString.indexOf('星期几') !== -1) {
+                formatString = formatString.replace('星期几', getWeekday(weekday, 'zh-CN'));
+            }
+            if (formatString.indexOf('weekday') !== -1) {
+                formatString = formatString.replace('weekday', getWeekday(weekday, 'en-US'))
+            }
+            if (formatString.indexOf('上下午') !== -1) {
+                formatString = formatString.replace('上下午', getAPM(date.getTime() - new Date(year, month, day - 1).getTime(), 'zh-CN'));
+            }
+            if (formatString.indexOf('AP' + month) !== -1) {
+                formatString = formatString.replace('AP' + month, getAPM(date.getTime() - new Date(year, month, day).getTime(), 'en-US'));
+            }
+
+            return formatString;
+        }
+
+        function getAPM(time, locale) {
+            if (locale === 'zh-CN') {
+                if (time <= 43200000) {
+                    return '上午';
+                } else {
+                    return '下午';
+                }
+            }
+            if (locale === 'en-US') {
+                if (time <= 43200000) {
+                    return 'AM';
+                } else {
+                    return 'PM';
+                }
+            }
+            return '';
+        }
+
+        function getWeekday(index, locale) {
+            const enWeekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const zhWeekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            if (locale === 'zh-CN') {
+                return '星期' + zhWeekdays[index];
+            }
+            if (locale === 'en-US') {
+                return enWeekdays[index];
+            }
+            return '';
+        }
+
+        function twoDigit(n) {
+            if (n < 10) {
+                return '0' + n;
+            }
+            return String(n);
+        }
+
+        time.textContent = dateFormatter(new Date(now), formatString);
+        setInterval(function() {
+            now += 1000;
+            time.textContent = dateFormatter(new Date(now), formatString);
+        }, 1000);
+    </script>
+</body>
+</html>
