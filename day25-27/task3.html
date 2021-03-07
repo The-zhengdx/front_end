@@ -33,8 +33,8 @@
 
             formatString = formatString.replace('YYYY', String(year));
             formatString = formatString.replace('YY', String(year % 100));
-            formatString = formatString.replace('MM', twoDigit(month));
-            formatString = formatString.replace('M', String(month));
+            formatString = formatString.replace('MM', twoDigit(month + 1));
+            formatString = formatString.replace('M', String(month + 1));
             formatString = formatString.replace('DD', twoDigit(day));
             formatString = formatString.replace('D', String(day));
             formatString = formatString.replace('hh', twoDigit(hour));
