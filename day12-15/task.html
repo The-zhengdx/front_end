@@ -8,8 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/task.css">
 </head>
-
 <body>
+    <!-- 应用栏部分 -->
     <div class="apps">
         <ul>
             <li class="app-item app-item-active">
@@ -32,18 +32,55 @@
             <div id="bottomBtn2"></div>
         </div>
     </div>
+    <!-- 导航栏部分 -->
     <nav>
-        <ul class="menu">
-            <li class="menu-item module-title">
-                <p>MENU</p>
-            </li>
-            <li class="menu-item"></li>
-            <li class="menu-item"></li>
-            <li class="menu-item"></li>
-            <li class="menu-item"></li>
-            <li class="menu-item"></li>
-        </ul>
+        <div class="nav-wrapper">
+            <ul class="nav-module">
+                <li class="nav-module-name nav-module-item">
+                    <p>MENU</p>
+                </li>
+                <li class="nav-module-item nav-module-item-active nav-module-item-info" data-info="21">
+                    <p>Overview</p>
+                </li>
+                <li class="nav-module-item nav-module-item-danger">
+                    <p>Sales</p>
+                </li>
+                <li class="nav-module-item">
+                    <p>Your Staff</p>
+                </li>
+                <li class="nav-module-item">
+                    <p>Analytics & targeting</p>
+                </li>
+                <li class="nav-module-item">
+                    <p>What's New</p>
+                </li>
+                <li class="nav-module-bottom"></li>
+                </ul>
+                <ul class="nav-module">
+                    <li class="nav-module-name nav-module-item">
+                        <p>YOUR PRODUCTS</p>
+                    </li>
+                    <li class="nav-module-item nav-module-item-icon book-icon">
+                        <p>Books</p>
+                    </li>
+                    <li class="nav-module-item nav-module-item-icon video-icon">
+                        <p>Tutorials</p>
+                    </li>
+                    <li class="nav-module-item nav-module-item-icon chart-icon">
+                        <p>Stocks</p>
+                    </li>
+                    <li class="nav-module-item nav-module-item-icon graph-icon">
+                        <p>Infographics</p>
+                    </li>
+                    <li class="nav-module-bottom"></li>
+            </ul>
+        </div>
+        <div class="nav-goal">
+            <p class="nav-goal-text"><span>Monthly Goals</span><span>$580/$3200</span></p>
+            <progress value="40" max="190"></progress>
+        </div>
     </nav>
+    <!-- 内容部分 -->
     <div class="content"></div>
 </body>
 
