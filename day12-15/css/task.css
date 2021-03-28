@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+.apps {
+    position: relative;
+    flex: 0 0 100px;
+    padding: 20px 0;
+    background-color: #1d2531;
+}
+
+.apps ul {
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.app-item {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+}
+
+.app-item:not(:first-child) {
+    margin-top: 20px;
+}
+
+.app-item:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #2d3848;
+    border-radius: 30px;
+}
+
+.add-left,
+.add-mid,
+.add-right {
+    background-color: #2d3848;
+}
+
+.add-left,
+.add-right {
+    flex: 0 0 8px;
+    height: 4px;
+}
+
+.add-mid {
+    flex: 0 0 4px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.add-left {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-right {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.app-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.app-item:hover {
+    cursor: pointer;
+}
+
+.app-item-active::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #2399f1;
+    box-shadow: 0px 0px 16px 3px #2399f1;
+    cursor: default;
+}
+
+.bottom-btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 26px;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48px;
+    height: 16px;
+}
+
+#bottomBtn1,
+#bottomBtn2 {
+    flex: 0 0 16px;
+}
+
+#bottomBtn1 {
+    background-image: url(../images/grid.png);
+    background-position: center;
+    background-size: contain;
+}
+
+#bottomBtn2 {
+    background-image: url(../images/settings.png);
+    background-position: center center;
+    background-size: contain;
+}
+
+nav {
+    flex: 0 0 250px;
+    background-color: #222c3c;
+}
+
+.content {
+    flex: 1 0 0;
+}
