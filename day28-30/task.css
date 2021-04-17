@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 20rem;
+
+    font-size: 0;
+}
+
+#email-input {
+    padding: .2rem .5rem;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-top: 1px solid #111;
+    border-left: 1px solid #111;
+    border-right: 1px solid #111;
+    border-bottom: none;
+}
+
+.email-sug {
+    position: absolute;
+    list-style: none;
+    /* margin: 0; */
+    /* padding-left: .5rem; */
+    /* padding-right: .5rem; */
+    min-width: 100%;
+    font-size: 1.5rem;
+    border-top: 1px solid #111;
+    border-left: 1px solid #111;
+    border-right: 1px solid #111;
+}
+
+.minder {
+    border-bottom: 1px solid #111;
+}
+
+#email-sug-wrapper li {
+    height: 2.5rem;
+    line-height: 2.5rem; 
+}
+
+.test {
+    height: 100px;
+    background-color: lightyellow;
+}
+
+.tip {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.active,
+.tip:hover {
+    background-color: lightgreen;
+}
