@@ -6,6 +6,7 @@ window.onload = function () {
     const skillCard = document.querySelector('.skill-card');
     // 当前top值
     let currTop = 0;
+    let screenX = 0;
     // 页面是否可以切换，防止连续切换，每次切换后等动画播放完再置为可切换状态
     let enable = true;
 
@@ -25,6 +26,20 @@ window.onload = function () {
         if (e.deltaY > 0) {
             scrollPage('down');
         } else {
+            scrollPage('up');
+        }
+    });
+
+    document.body.addEventListener('touchstart', function (e) {
+        screenX = e.changedTouches[0].screenX;
+    });
+
+    document.body.addEventListener('touchend', function (e) {
+        let moveLength = e.changedTouches[0].screenX - screenX;
+        if (moveLength > 1) {
+            scrollPage('down');
+        }
+        if (moveLength < -1) {
             scrollPage('up');
         }
     });
